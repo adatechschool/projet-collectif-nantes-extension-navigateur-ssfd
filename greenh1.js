@@ -12,6 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
           target: { tabId: tabs[0].id },
           func: redBorder
         });
+
+        // Troisième appel pour changer la taille de la font
+        chrome.scripting.executeScript({
+            target: { tabId: tabs[0].id },
+            func: fontSizeChange
+        })
+
       });
     });
   });
@@ -30,5 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
     images.forEach((image) => {
       image.style.border = "solid 4px red";
     });
+  }
+
+  function fontSizeChange() {
+    console.log("changement de taille de police")
+    const characters = document.querySelectorAll('p')
+    characters.forEach((character) =>{
+        character.style.fontSize = "40px";
+    }
+    )
   }
   
