@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "green h1",
+    "version": "1.0",
+    "description": "coloring all h1 green",
+    "icons": {
+      "64": "/green.png"
+    },
+   "action": {
+    "default_popup": "greenh1.html",
+    "default_icon": {
+      "64": "/green.png"
+    }
+},
+    "permissions": ["scripting", "activeTab"]
+}
