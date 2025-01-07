@@ -1,16 +1,25 @@
 {
     "manifest_version": 3,
-    "name": "green h1",
+    "name": "grumpyCat",
     "version": "1.0",
-    "description": "coloring all h1 green",
+    "description": "grumpy Cat everywhere",
     "icons": {
-      "64": "/green.png"
+      "64": "photo/grumpyCat.png"
     },
    "action": {
-    "default_popup": "greenh1.html",
+    
     "default_icon": {
-      "64": "/green.png"
+      "64":"photo/grumpyCat.png" 
     }
 },
+"content_scripts":[
+{
+  "js":["content.js"],
+  "matches": ["<all_urls>"],
+  "run_at": "document_end"
+}
+
+],
     "permissions": ["scripting", "activeTab"]
 }
+
