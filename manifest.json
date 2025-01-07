@@ -10,16 +10,23 @@
     
     "default_icon": {
       "64":"photo/grumpyCat.png" 
+
     }
 },
 "content_scripts":[
 {
   "js":["content.js"],
-  "matches": ["<all_urls>"],
-  "run_at": "document_end"
+  "matches": ["<all_urls>"]
 }
 
 ],
-    "permissions": ["scripting", "activeTab"]
+    "permissions": ["scripting", "activeTab"],
+    
+"web_accessible_resources": [
+    {
+      "resources": ["photo/grumpyCat.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
 
