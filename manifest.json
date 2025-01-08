@@ -1,16 +1,16 @@
 {
-    "manifest_version": 3,
-    "name": "green h1",
-    "version": "1.0",
-    "description": "coloring all h1 green",
-    "icons": {
-      "64": "/green.png"
-    },
-   "action": {
-    "default_popup": "greenh1.html",
+  "manifest_version": 3,
+  "name": "Zen Plugin",
+  "version": "1.0",
+  "description": "Zenify your life !",
+  "icons": {
+    "64": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
     "default_icon": {
-      "64": "/green.png"
+      "64": "icon.png"
     }
-},
-    "permissions": ["scripting", "activeTab"]
+  },
+  "permissions": ["scripting", "activeTab"]
 }
