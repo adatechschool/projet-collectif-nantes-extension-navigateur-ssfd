@@ -11,6 +11,9 @@
     "default_icon": {
       "64": "icon.png"
     }
-  },
+  },  
+  "background": {
+    "service_worker": "background.js"
+},
   "permissions": ["scripting", "activeTab"]
 }

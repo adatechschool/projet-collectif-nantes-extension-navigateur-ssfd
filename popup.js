@@ -1,21 +1,33 @@
 let timer = document.getElementById("timer");
-let time = 10;
+// let time = 2;
+const MESSAGE = document.getElementById("zen-message");
+// let intervalId = null;
 
-function startTimer() {
-    setInterval(updateTimer, 1000);
+// function startTimer() {
+//     time = 2;
+//     MESSAGE.innerHTML = "";
+//     intervalId = setInterval(updateTimer, 1000);
+// }
+
+// function updateTimer() {
+//     timer.innerHTML = "00:" + "0"+time;
+//     time--;
+    // if (time < 0) {
+    //     displayZenMessage();
+        
+    //     setTimeout(() => {
+    //         time = 2;
+    //         MESSAGE.innerHTML = ""; 
+    //     }, 1000);
+    // }
+// }
+
+// function stopTimer() {
+//     clearInterval(intervalId);
+// }
+
+function displayZenMessage() {    
+    MESSAGE.innerHTML = "très doux, très gentil, avec des coeurs ! :)";
 }
-
-function updateTimer() {
-    timer.innerHTML = "00:" + time;
-    time--;
-
-    if (time < 0) {
-        time = 10;
-        stopTimer();
-    }
-
-function stopTimer() {
-    clearInterval(timer);
-}
-}
-startTimer();
+displayZenMessage()
+// startTimer();
