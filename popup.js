@@ -31,3 +31,6 @@ function displayZenMessage() {
 }
 displayZenMessage()
 // startTimer();
+chrome.storage.local.get(["key"]).then((result) => {
+    alert("Value is " + result.key);
+  });
