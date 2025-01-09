@@ -90,8 +90,10 @@ function audioZen() {
   
       try {
         const response = await fetch(`${BASE_URL}${endpoint}?${queryParams}`);
+        console.log(response)
         if (!response.ok) {
           throw new Error(`API error: ${response.status}`);
+          
         }
         return await response.json();
       } catch (error) {
@@ -102,10 +104,9 @@ function audioZen() {
   
     const getWellnessPlaylist = async (limit = 1) => {
       return await fetchJamendoAPI("/tracks/", {
-        tags: "wellness relaxing meditation peaceful",
+        tags: "wellness",
         limit: limit,
         include: "musicinfo",
-        orderby: "popularity_total",
       });
     };
   
