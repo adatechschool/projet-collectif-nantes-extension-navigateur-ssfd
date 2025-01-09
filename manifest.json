@@ -26,5 +26,8 @@
     "alarms",
     "notifications",
     "windows"
-  ]
+  ],
+  "externally_connectable": {
+    "matches": ["https://api.jamendo.com/*"]
+  }
 }
