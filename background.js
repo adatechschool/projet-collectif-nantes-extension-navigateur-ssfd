@@ -52,6 +52,11 @@ chrome.notifications.onButtonClicked.addListener((notificationId, buttonIndex) =
     if (notificationId === 'pauseNotification-30' || notificationId === 'pauseNotification-60') {
         if (buttonIndex === 0) {
             console.log("L'utilisateur commence une pause !");
+//__________________________
+         // Appeler une fonction pour afficher les images défilantes  
+         chrome.runtime.sendMessage({action: "startImageSlideshow"});
+//__________________________
+
         } else if (buttonIndex === 1) {
             console.log("L'utilisateur reporte la pause de 5 minutes.");
             // Reprogrammer une alarme pour 5 minutes supplémentaires
@@ -63,9 +68,11 @@ chrome.notifications.onButtonClicked.addListener((notificationId, buttonIndex) =
 });
 
 //alimentation du stockage locale
-chrome.storage.local.set({ key: "Welcome!" }).then(() => {
+chrome.storage.local.set({ key: "Bonjour" }).then(() => {
     console.log("Value is set");
   });
   
 
 chrome.action.openPopup()
+
+
