@@ -5,14 +5,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     chrome.alarms.create("pauseReminder-30", {
       delayInMinutes: 0.1,
     });
-    sendResponse({ response: "💆🏻Pause dans 30 min💆🏻" });
+    sendResponse({ response: "💆🏻Pause dans 30min💆🏻" });
   } else if (message.type === "greeting-60") {
     console.log("Message reçu depuis popup.js :", message.data);
     // Créer une alarme pour 60 minutes
     chrome.alarms.create("pauseReminder-60", {
       delayInMinutes: 60,
     });
-    sendResponse({ response: "💆🏻Pause dans 60 min💆🏻" });
+    sendResponse({ response: "💆🏻Pause dans 60min💆🏻" });
   }
 });
 
