@@ -2,9 +2,9 @@ button{
     padding: 8px 16px;
     border: none;
     border-radius: 50px;
-    width: 80px;
-    height: 80px;
-    font-size: 10px;
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -13,25 +13,22 @@ button{
     justify-content: center;
 }
 #time-30min {
-    background-color: #4CAF50;
-    color: #333;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: black;
+    color: white;
 }
 
 #time-30min:hover {
-    background-color: #9ee2a1;
+    background-color: grey;
     transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 #time-60min{
-    background-color: #d859de;
-    color: #333;
-    border: 1px solid #ddd;
+    background-color: black;
+    color: white;
 }
 
 #time-60min:hover {
-    background-color: #c69dc8;
+    background-color: grey;
     transform: translateY(-1px);
 }
 
