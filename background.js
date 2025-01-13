@@ -5,14 +5,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     chrome.alarms.create("pauseReminder-30", {
       delayInMinutes: 0.1,
     });
-    sendResponse({ response: "La pause est dans 30 minutes" });
+    sendResponse({ response: "💆🏻Pause dans 30 min💆🏻" });
   } else if (message.type === "greeting-60") {
     console.log("Message reçu depuis popup.js :", message.data);
     // Créer une alarme pour 60 minutes
     chrome.alarms.create("pauseReminder-60", {
       delayInMinutes: 60,
     });
-    sendResponse({ response: "La pause est dans 60 minutes" });
+    sendResponse({ response: "💆🏻Pause dans 60 min💆🏻" });
   }
 });
 
@@ -52,9 +52,10 @@ const urls = [
     "https://www.youtube.com/watch?v=mIeUmvy2b-k",
     "https://www.youtube.com/watch?v=ssss7V1_eyA",
     "https://www.youtube.com/watch?v=inpok4MKVLM",
+    "https://www.youtube.com/watch?v=f3N2QrQMCsQ",
     "https://www.youtube.com/watch?v=FkcPe_BsX70&list=PL8qGgKC5WkTQsa-dTqRY6-EMJkdUNxieN&index=3",
-    "https://www.youtube.com/watch?v=fZCUYYW3W8c&list=PL8qGgKC5WkTQsa-dTqRY6-EMJkdUNxieN&index=11",
-    "https://www.youtube.com/watch?v=f3N2QrQMCsQ"
+    "https://www.youtube.com/watch?v=fZCUYYW3W8c&list=PL8qGgKC5WkTQsa-dTqRY6-EMJkdUNxieN&index=11"
+    
   ];
 function getRandomUrl(){
     return urls[Math.floor(Math.random() * urls.length)];
@@ -108,7 +109,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
     };
 });
 //alimentation du stockage locale
-chrome.storage.local.set({ key: "🧘🏻5 min to reset your day in a positive way🧘🏻" }).then(() => {
+chrome.storage.local.set({ key: "🧘🏻5 MIN TO RESET YOUR DAY IN A POSITIVE WAY🧘🏻" }).then(() => {
   console.log("Value is set");
 });
 
