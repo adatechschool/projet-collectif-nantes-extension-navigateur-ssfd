@@ -43,8 +43,6 @@ Les notifications restent visibles jusqu'à ce que l'utilisateur interagisse ave
     *Commencer votre pause (un divertissement de bien-être vous sera proposé)
     *Reporter la pause de 5 minutes
 
-
-
 # Fichiers du projet
 
 background.js : Gestion des alarmes, notifications et lecture des vidéos,sons,images et citations de bien-être
