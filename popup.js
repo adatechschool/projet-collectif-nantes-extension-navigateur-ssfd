@@ -23,7 +23,7 @@ chrome.storage.local.get(["key"]).then((result) => {
 //________________________________
 // const imageContainer = document.getElementById('image-container');
 
-// // Liste d'URLs d'images 
+//  Liste d'URLs d'images 
 // let images = [
 //   'photo/istockphoto-120529181-612x612.jpg',
 //   'photo/istockphoto-147694372-612x612.jpg',

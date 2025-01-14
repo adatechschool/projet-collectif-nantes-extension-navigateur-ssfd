@@ -69,7 +69,6 @@ chrome.storage.local.set({ key: "Bonjour" }).then(() => {
     console.log("Value is set");
   });
   
-
 chrome.action.openPopup()
 
 //Fonction pour afficher images
@@ -132,12 +131,13 @@ let images = [
 ];
 
 function loadImages(){
-  const randomImgs = images[Math.floor(Math.random() * images.length)];
-  chrome.tabs.create({
+ const randomImgs = images[Math.floor(Math.random() * images.length)];
+ chrome.tabs.create({
   url: randomImgs,
   active: true,
   })
-}
+};
+
 loadImages()
 
 
