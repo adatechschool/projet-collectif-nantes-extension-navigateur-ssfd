@@ -1,1 +1,0 @@
-console.log("extension chrome prête à être alimentée")
