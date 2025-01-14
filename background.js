@@ -80,7 +80,7 @@ chrome.notifications.onButtonClicked.addListener(
       if (buttonIndex === 0) {
         console.log("L'utilisateur commence une pause !");
         //fonction aleatoire à déclencher;
-        const randomZen = [watchZenVideo, getAudioUrl];
+        const randomZen = [watchZenVideo, getAudioUrl,startDefilement];
         const indexRandom = Math.floor(Math.random() * randomZen.length);
         const randomResult = randomZen[indexRandom]();
         return randomResult
