@@ -52,7 +52,7 @@ chrome.notifications.onButtonClicked.addListener((notificationId, buttonIndex) =
     if (notificationId === 'pauseNotification-30' || notificationId === 'pauseNotification-60') {
         if (buttonIndex === 0) {
             console.log("L'utilisateur commence une pause !");
-           loadImages()
+           startDefilement()
 
         } else if (buttonIndex === 1) {
             console.log("L'utilisateur reporte la pause de 5 minutes.");
@@ -71,7 +71,7 @@ chrome.storage.local.set({ key: "Bonjour" }).then(() => {
   
 chrome.action.openPopup()
 
-//Fonction pour afficher images
+//Fonction pour afficher les images
 let images = [
   'photo/istockphoto-120529181-612x612.jpg',
   'photo/istockphoto-147694372-612x612.jpg',
@@ -140,4 +140,28 @@ function loadImages(){
 
 loadImages()
 
+//fonction pour générer les images alétoirement
+function getRandomImgs() {
+  return images[Math.floor(Math.random() * images.length)];
+}
+// fonction pour charger les image dans un nouvel onglet
+function loadImages() {
+  chrome.tabs.create({
+      url: getRandomImgs(),
+      active: true
+  });
+}
 
+// Fonction pour faire défiler les images
+function startDefilement() {
+  // Affiche la première image dans un nouvel onglet
+  chrome.tabs.create({ url: getRandomImgs() });
+  
+  // Change l'image toutes les 3 secondes
+  const intervalId = setInterval(() => {
+    chrome.tabs.update({ url: getRandomImgs() });
+  }, 3000);
+  
+  // Arreter le défilement après 2 minutes
+  setTimeout(() => clearInterval(intervalId), 120000);
+}
