@@ -43,28 +43,3 @@ button{
     padding: 15px;
     line-height: 1.4;
 }
-/* styles.css */
-
-/* Styles pour le conteneur d'images */
-#image-container {
-    display: flex; /* Changez cela selon vos besoins */
-    flex-wrap: wrap; /* Permet aux images de s'enrouler */
-    justify-content: center; /* Centre les images horizontalement */
-    align-items: center;/*Centre les images verticalement*/
-    overflow: hidden; /* Cache les débordements */
-    /*height: 500px; /*met le bazard! Hauteur fixe pour toutes les images*/ 
-}
-
-/* Styles pour les images */
-.image {
-    opacity: 0; /* Caché par défaut */
-    transition: opacity 0.1s ease-in-out; /* Transition douce lors de l'affichage */
-    width: 500px; /* Ajustez la taille selon vos besoins */
-    height: 500px;/*Hauteur fixe pour toutes les images*/
-    object-fit: cover;/*Maintient le rapport d'aspect et remplit le conteneur*/
-    margin: 10px; /* Ajoute un peu d'espace entre les images */
-}
-
-.image.visible {
-    opacity: 1; /* Rend visible lorsque la classe 'visible' est ajoutée */
-}

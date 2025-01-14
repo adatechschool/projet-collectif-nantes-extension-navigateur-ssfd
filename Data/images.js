@@ -82,6 +82,5 @@ let images = [
     }, 3000);
     
     // Arreter le défilement après 2 minutes
-    setTimeout(() => clearInterval(intervalId), 120000);
+    setTimeout(() => clearInterval(intervalId), 20000);
   }
-  

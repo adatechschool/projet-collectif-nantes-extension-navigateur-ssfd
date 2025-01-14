@@ -51,8 +51,6 @@ chrome.alarms.onAlarm.addListener((alarm) => {
   }
 });
 
-
-
 // Gestionnaire pour les boutons des notifications
 chrome.notifications.onButtonClicked.addListener(
   (notificationId, buttonIndex) => {
@@ -80,6 +78,7 @@ chrome.notifications.onButtonClicked.addListener(
     }
   }
 );
+
 //fonction pour déclencher un nouveau chrono si l'utilisateur choisis une pause dans 5min:
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === "pauseReminder-5") {
@@ -96,6 +95,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
     });
   }
 });
+
 //alimentation du stockage locale
 chrome.storage.local
   .set({ key: "🧘🏻5 MIN TO RESET YOUR DAY IN A POSITIVE WAY🧘🏻" })
