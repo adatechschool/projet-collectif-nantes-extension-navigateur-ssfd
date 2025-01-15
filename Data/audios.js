@@ -83,30 +83,11 @@ const quotations = [
       const data = await response.json();
       const audioUrl = data.results.map((track) => track.audio);
       console.log("url audio trouvée :", audioUrl);
-      getQuotation();
       chrome.tabs.create({
         url: audioUrl[0],
       });
     } catch (error) {
       console.error("Erreur :", error);
-    }
-  }
-  
-  
-  function getQuotation() {
-    try {
-      const randomQuotation = quotations[Math.floor(Math.random() * quotations.length)];
-      console.log(randomQuotation);
-      chrome.notifications.create({
-        type: "basic",
-        iconUrl: "icon.png",
-        title: "Citation pour votre pause",
-        message: `${randomQuotation}`,
-      });
-      return randomQuotation;
-    } catch (error) {
-      console.error("Erreur lors de la récupération de la citation:", error);
-      return "La pause est un moment précieux pour se ressourcer.";
     }
   }
   

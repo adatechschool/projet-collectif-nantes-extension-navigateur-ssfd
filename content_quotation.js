@@ -1,7 +1,7 @@
-console.log("extension chrome prête à être alimentée")
+console.log("extension chrome prête à être alimentée");
 
 const quotations = [
-    "La pause est un moment précieux pour se ressourcer.",
+  "La pause est un moment précieux pour se ressourcer.",
   "Prendre soin de soi n'est pas du temps perdu.",
   "Un esprit reposé est un esprit plus efficace.",
   "Respire profondément et profite de ce moment.",
@@ -30,30 +30,17 @@ const quotations = [
   "Ton bien-être est une priorité, pas une option.",
   "Le calme est le meilleur des conseillers.",
   "Chaque pause est une victoire sur le stress.",
-  "La patience est une forme de sagesse."
-  ];
+  "La patience est une forme de sagesse.",
+];
 
-  const randomQuotation = quotations[Math.floor(Math.random() * quotations.length)];
+const randomQuotation =
+  quotations[Math.floor(Math.random() * quotations.length)];
 
 // Créer un nouvel élément <div> pour afficher la citation
-const quotationDiv = document.createElement('div');
+const quotationDiv = document.createElement("div");
+quotationDiv.classList.add("quotation");
+// Ajouter la citation dans le div
+quotationDiv.innerText = randomQuotation;
 
-// Appliquer du style CSS pour positionner la citation
-quotationDiv.style.position = 'fixed';  // Pour le rendre visible au-dessus de la page
-quotationDiv.style.top = '10%';  // Placer la citation dans le premier tiers du haut de la page
-quotationDiv.style.left = '50%';  // Centrer horizontalement
-quotationDiv.style.transform = 'translateX(-50%)';  // Ajuster pour centrer parfaitement
-quotationDiv.style.padding = '15px';
-quotationDiv.style.backgroundColor = '#f0f0f0';
-quotationDiv.style.borderRadius = '8px';
-quotationDiv.style.fontSize = '30px';
-quotationDiv.style.color = 'black';
-quotationDiv.style.textAlign = 'center';  // Centrer le texte à l'intérieur du div
-quotationDiv.style.zIndex = '9999';  // Assurer que le texte est au-dessus des autres éléments
-
-  
-  // Ajouter la citation dans le div
-  quotationDiv.innerText = randomQuotation;
-  
-  // Ajouter le div au body de la page
-  document.body.appendChild(quotationDiv);
+// Ajouter le div au body de la page
+document.body.appendChild(quotationDiv);

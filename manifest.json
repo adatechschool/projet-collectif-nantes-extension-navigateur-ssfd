@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Zen Plugin",
+  "name": "Ma pause zen",
   "version": "1.0",
   "description": "Zenify your life !",
   "icons": {
@@ -33,6 +33,7 @@
   },
 "content_scripts": [{
         "js": ["content_quotation.js"],
+        "css": ["content_quotation.css"],
         "matches": ["https://prod-1.storage.jamendo.com/*"]
     }]
 }
