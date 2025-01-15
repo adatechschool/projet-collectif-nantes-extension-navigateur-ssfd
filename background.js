@@ -1,5 +1,5 @@
 import { watchZenVideo } from './Data/youtube-links.js';
-import { getAudioUrl } from './Data/quotations.js';
+import { getAudioUrl } from './Data/audios.js';
 import { startDefilement } from './Data/images.js';
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -7,7 +7,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     console.log("Message reçu depuis popup.js :", message.data);
     // Créer une alarme pour 30 minutes
     chrome.alarms.create("pauseReminder-30", {
-      delayInMinutes: 0.1,
+      delayInMinutes: 0.05,
     });
     sendResponse({ response: "💆🏻Pause dans 30min💆🏻" });
   } else if (message.type === "greeting-60") {

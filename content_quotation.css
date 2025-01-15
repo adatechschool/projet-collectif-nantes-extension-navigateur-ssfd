@@ -1,0 +1,14 @@
+/* Appliquer du style CSS pour positionner la citation */
+.quotation{
+    position :fixed;  
+    top: 10%; 
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    background-color:  #f0f0f0;
+    border-radius : 8px;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    z-index: 9999;
+    }
