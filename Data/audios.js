@@ -9,7 +9,7 @@ export {getAudioUrl}
   async function getTrackIds() {
     try {
       const url = "https://api.jamendo.com/v3.0/tracks/"; 
-      const params = new URLSearchParams({ //méthode pour générer une URL avec plusieurs paramètres
+      const params = new URLSearchParams({ //générer une URL avec plusieurs paramètres
         client_id: "91856da6", //dps ligne 11 construction du endpoint
         format: "json", 
         tags: moodStyle,

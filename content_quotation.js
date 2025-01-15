@@ -38,24 +38,12 @@ const randomQuotation =
 
 // Créer un nouvel élément <div> pour afficher la citation
 const quotationDiv = document.createElement("div");
-const iconQuotation = document.createElement('img')
-
-iconQuotation.src = chrome.runtime.getURL('icon.png');
-
-iconQuotation.onload = () => {
-  console.log("L'image s'est chargée correctement");
-};
-
-iconQuotation.onerror = () => {
-  console.log("Erreur de chargement de l'image");
-  // Afficher le chemin qui pose problème
-  console.log("Chemin tenté :", iconQuotation.src);
-};
+const iconQuotation = document.createElement("img");
+iconQuotation.src = chrome.runtime.getURL("icon.png");
 
 quotationDiv.classList.add("quotation");
 // Ajouter la citation dans le div
 quotationDiv.innerText = randomQuotation;
-
 
 // Ajouter le div au body de la page
 document.body.appendChild(quotationDiv);

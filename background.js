@@ -26,7 +26,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
     chrome.notifications.create("pauseNotification-30", {
       type: "basic",
       iconUrl: "icon.png",
-      title: "Vous mértiez une petite pause ZEN 💆🏻",
+      title: "Vous méritez une petite pause ZEN 💆🏻",
       message: "Il est temps de faire une pause de 5 minutes",
       priority: 2,
       requireInteraction: true,
@@ -39,7 +39,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
     chrome.notifications.create("pauseNotification-60", {
       type: "basic",
       iconUrl: "icon.png",
-      title: "Vous mértiez une petite pause ZEN 💆🏻",
+      title: "Vous méritez une petite pause ZEN 💆🏻",
       message: "Il est temps de faire une pause de 10 minutes",
       priority: 2,
       requireInteraction: true,
@@ -79,7 +79,8 @@ chrome.notifications.onButtonClicked.addListener(
   }
 );
 
-//fonction pour déclencher un nouveau chrono si l'utilisateur choisis une pause dans 5min:
+//fonction pour déclencher un nouveau chrono si l'utilisateur 
+//choisit une pause dans 5min:
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === "pauseReminder-5") {
     chrome.notifications.create("pauseNotification-5", {

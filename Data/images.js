@@ -64,7 +64,8 @@ let images = [
     return images[Math.floor(Math.random() * images.length)];
   }
 
-  // fonction easter egg (oeuf de pâques) qui charge les random images dès qu'on ouvre un nouvel onglet 
+  // fonction easter egg (oeuf de pâques) qui charge les random images 
+  // dès qu'on ouvre un nouvel onglet 
   function loadImages(){
     chrome.tabs.create({
       url: getRandomImgs(),
@@ -83,6 +84,6 @@ let images = [
     }, 2000);
     
     // Arreter le défilement après 2 minutes
-    setTimeout(() => clearInterval(intervalId), 8000);
+    setTimeout(() => clearInterval(intervalId), 6000);
   }
   
