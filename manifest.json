@@ -35,5 +35,9 @@
         "js": ["content_quotation.js"],
         "css": ["content_quotation.css"],
         "matches": ["https://prod-1.storage.jamendo.com/*"]
+    }],
+    "web_accessible_resources": [{
+      "resources": ["icon.png"],
+      "matches": ["<all_urls>"]
     }]
 }

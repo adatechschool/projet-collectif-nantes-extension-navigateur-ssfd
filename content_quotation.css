@@ -1,5 +1,8 @@
 /* Appliquer du style CSS pour positionner la citation */
 .quotation{
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espace entre l'image et le texte */
     position :fixed;  
     top: 10%; 
     left: 50%;
