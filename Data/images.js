@@ -1,6 +1,6 @@
 export { startDefilement }
 
-//Fonction pour afficher les images
+//Tableau des images
 let images = [
     'photo/istockphoto-120529181-612x612.jpg',
     'photo/istockphoto-147694372-612x612.jpg',
@@ -63,14 +63,15 @@ let images = [
   function getRandomImgs() {
     return images[Math.floor(Math.random() * images.length)];
   }
-  // fonction pour charger les image dans un nouvel onglet
-  function loadImages() {
+
+  // fonction easter egg (oeuf de pâques) qui charge les random images dès qu'on ouvre un nouvel onglet 
+  function loadImages(){
     chrome.tabs.create({
-        url: getRandomImgs(),
-        active: true
-    });
+      url: getRandomImgs(),
+      active: true
+  });
   }
-  
+
   // Fonction pour faire défiler les images
   function startDefilement() {
     // Affiche la première image dans un nouvel onglet
@@ -79,9 +80,9 @@ let images = [
     // Change l'image toutes les 3 secondes
     const intervalId = setInterval(() => {
       chrome.tabs.update({ url: getRandomImgs() });
-    }, 3000);
+    }, 2000);
     
     // Arreter le défilement après 2 minutes
-    setTimeout(() => clearInterval(intervalId), 6000);
+    setTimeout(() => clearInterval(intervalId), 8000);
   }
   

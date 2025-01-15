@@ -96,7 +96,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
   }
 });
 
-//alimentation du stockage locale
+//alimentation du stockage local
 chrome.storage.local
   .set({ key: "🧘🏻5 MIN TO RESET YOUR DAY IN A POSITIVE WAY🧘🏻" })
   .then(() => {
